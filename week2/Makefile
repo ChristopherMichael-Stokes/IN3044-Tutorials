@@ -1,9 +1,9 @@
-CC=gcc
+CC=g++
 CFLAGS=-I.
-DEPS = landscape.h list.h hillclimb.h
-OBJ = main.o list.o hillclimb.o
+DEPS = landscape.hh search.hh
+OBJ = main.o search.o landscape.o
 
-%.o: %.c $(DEPS)
+%.o: %.cc $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 search: $(OBJ)
