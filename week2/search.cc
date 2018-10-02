@@ -4,8 +4,7 @@
 #include "landscape.hh"
 
 void search::print_position() const {
-	std::cout << "\tx: " << position.x << ", y: " 
-		<< position.y << std::endl;
+	std::cout << "\tcurrent position(x: " << position.x << ", y: ";
 }
 
 std::list<location> search::near_locations() const {
@@ -25,4 +24,12 @@ std::list<location> search::near_locations() const {
 					(pos.y < 0 || pos.y >= ROWS));
 			});
 	return locations;
+}
+
+void hill_climb::solve_step() {
+
+}
+
+void tabu::solve_step() {
+
 }

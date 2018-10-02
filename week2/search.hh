@@ -6,8 +6,7 @@
 
 struct location {
 	int x, y;
-	location(int x, int y) : x{ x }, y{ y }{}
-	location() : location(0, 0) {}
+	location(int x=0, int y=0) : x{ x }, y{ y }{}
 };
 
 class search {
@@ -17,7 +16,6 @@ protected:
 	location position;
 	std::list<location> near_locations() const;
 public:
-	search() {position.x = 0; position.y = 0;}
 	void print_position() const;
 	virtual void solve_step() = 0;
 	virtual ~search() {}
